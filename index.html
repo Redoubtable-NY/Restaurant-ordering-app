@@ -1,0 +1,66 @@
+<html>
+    <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="styles.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Smythe&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="food-app">
+            <header>
+                <div class="header-title">
+                    <h1>Jimmy's Diner</h1>
+                    <p>The best burgers and pizzas in town.</p>
+                </div>
+                <div class="image-container">
+                    <img id="hamburger" src="images/hamburger.png" alt="a hamburger on a table">
+                </div>
+            </header>
+            
+            <section id="modal" class="hidden">
+                    <div class="modal-contents">
+                        <form>
+                            <h2>Enter card details</h2>
+                            <input type="text" id="customer-name" class="entry" name="customer-name" placeholder="Enter your name" required>
+                            <input type="text" id="customer-card-number" class="entry" name="customer-card-numbe" placeholder="Enter card number" required>
+                            <input type="text" id="customer-cvv" class="entry" name="customer-cvv" placeholder="Enter CVV" required>            
+                            <input id="form-primary-button" class="form-cta-button" type="button" value="Pay" required>
+                        </form>
+                    </div>
+            </section>
+            
+            <div id="overlay" class="hidden">
+            </div>
+            
+            <section id="food-menu">
+                <!-- Items to be populated via an array.-->
+            </section>
+            
+            <section id="order-confirmation-container" class="hidden"> 
+                <div id="order-confirmation-message">
+                    <p>Thanks, James! Your order is on its way!</p>
+                </div>
+                <!-- Confirmation message will populate here. -->
+            </section>
+            
+            <section id="food-cart" class="hidden">
+                <div id="cart-title">
+                    <p>Your order</p>
+                </div>
+                <div id="cart-contents">
+                <!-- Customer item selections will populate here. -->
+                </div>
+                <div id="total-cost">
+                <!-- Total cost value will be displayed here  -->
+                </div>
+                <div class="cart-cta-button">
+                    <button id="cart-primary-button">Complete order</button>
+                </div>
+            </section>
+
+            <script src="index.js" type="module"></script>
+        </div>
+    </body>
+</html>
+
