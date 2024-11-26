@@ -7,7 +7,8 @@ const primaryButton = document.getElementById("cart-primary-button")
 const overlay = document.getElementById("overlay")
 const modal = document.getElementById("modal")
 const orderConfirmationContainer = document.getElementById("order-confirmation-container")
-const formPrimaryButton = document.getElementById("form-primary-button")
+// const formPrimaryButton = document.getElementById("form-primary-button")
+const cardDetails = document.getElementById("card-details")
 let itemList = []
 
 
@@ -22,14 +23,23 @@ document.addEventListener("click",function(e){
     }
 })
 
-formPrimaryButton.addEventListener("click", revealConfirmation)
 
-function revealConfirmation(){
+cardDetails.addEventListener("submit", function(event){
+    event.preventDefault()
     modal.classList.add('hidden')
     overlay.classList.add('hidden')
     foodCart.classList.add('hidden')
     orderConfirmationContainer.classList.remove('hidden')
-}
+    }
+)
+// formPrimaryButton.addEventListener("submit", revealConfirmation)
+
+// function revealConfirmation(){
+//     modal.classList.add('hidden')
+//     overlay.classList.add('hidden')
+//     foodCart.classList.add('hidden')
+//     orderConfirmationContainer.classList.remove('hidden')
+// }
 
 primaryButton.addEventListener("click", triggerModal)
 
